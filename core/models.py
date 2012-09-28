@@ -30,3 +30,6 @@ class Devotional(BaseModel):
     month = models.IntegerField(null=False, default=1)
     day = models.IntegerField(null=False, default=1)
     body = models.TextField(null=True, blank=True, default='')
+    
+    def __unicode__(self):
+        return self.title + " " + str(self.month) + " - " + str(self.day)

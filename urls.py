@@ -1,18 +1,18 @@
 from django.conf.urls.defaults import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'devotionals.views.home', name='home'),
-    url(r'devotional/(?P<month>\w+)/(?P<day>\w+)/', 'devotionals.views.devotional', name='devotional')
+    url(r'devotional/(?P<month>\w+)/(?P<day>\w+)/', 'devotionals.views.devotional', name='devotional'),
     # url(r'^devotionals/', include('devotionals.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 )
