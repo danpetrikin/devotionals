@@ -1,0 +1,3 @@
+{% for dev in devotionals %}
+<a href="{% url devotional dev.month dev.day %}">{{dev.title}}</a><br/>
+{% endfor %}

@@ -1,0 +1,4 @@
+{% load filters %}
+<h1>{{devotional.title}}</h1>
+
+{{devotional.body|htmlunescape|removequotes|safe}}
